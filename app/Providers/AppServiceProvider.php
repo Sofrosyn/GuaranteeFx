@@ -7,6 +7,7 @@ use Egulias\EmailValidator\Validation\DNSCheckValidation;
 use Egulias\EmailValidator\Validation\MultipleValidationWithAnd;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -46,5 +47,7 @@ class AppServiceProvider extends ServiceProvider
         Validator::extend('first_and_last_name', function ($attribute, $value) {
             return preg_match('/^\w+\s\w++(\s\w+)?$/i', $value);
         });
+
+        View::share('preloader_img', asset('landing/img/in-lazy.gif'));
     }
 }

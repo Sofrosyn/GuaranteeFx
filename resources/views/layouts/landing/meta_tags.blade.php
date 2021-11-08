@@ -4,9 +4,9 @@
 <!-- Site Properties -->
 <title>
     @isset($title)
-        {{ $title }} | {{ config('app.name') }}
+        {{ $title }} - {{ config('app.name') }}
     @else
-        @hasSection('title')@yield('title') | @endif{{ config('app.name') }}
+        @hasSection('title')@yield('title') - @endif{{ config('app.name') }}
     @endisset
 </title>
 <!-- Critical preload -->

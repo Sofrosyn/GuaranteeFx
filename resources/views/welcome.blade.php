@@ -1,4 +1,4 @@
-@extends('layouts.landing')
+@extends('layouts.landing.master')
 
 @section('title', 'Welcome')
 
@@ -14,19 +14,18 @@
                             <div class="uk-grid-medium" data-uk-grid>
                                 <div class="uk-width-1-2@s">
                                     <div class="uk-overlay">
-                                        <h1>Learn forex with our courses.</h1>
+                                        <h1>Professional Traders</h1>
                                         <p class="uk-text-lead uk-visible@m">
-                                            Weekly educational workshops are a great resource for any skill level trader
+                                            Let Professional Traders Manage Your Investment Start making money with our
+                                            Forex Managed Accounts
                                         </p>
-                                        <a href="#" class="uk-button uk-button-default uk-border-rounded uk-visible@s">
-                                            Discover courses
-                                        </a>
+                                        <a href="#" class="uk-button uk-button-default uk-border-rounded uk-visible@s">GuarantyFX</a>
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
                                     <img class="in-slide-img" src="{{ asset('landing/img/in-lazy.gif') }}"
-                                         data-src="{{ asset('landing/img/in-liquid-slide-3.svg') }}"
-                                         alt="image-slide" width="500" height="400" data-uk-img>
+                                         data-src="{{ asset('landing/img/in-liquid-slide-1.svg') }}" alt="image-slide"
+                                         width="500" height="400" data-uk-img>
                                 </div>
                             </div>
                         </div>
@@ -36,19 +35,19 @@
                             <div class="uk-grid-medium" data-uk-grid>
                                 <div class="uk-width-1-2@s">
                                     <div class="uk-overlay">
-                                        <h1>Award-winning trading platforms.</h1>
+                                        <h1>Forex Managed Accounts</h1>
                                         <p class="uk-text-lead uk-visible@m">
-                                            Explore endless trading opportunities with tight spreads and no commission
+                                            Explore endless trading opportunities with high returns on investments
                                         </p>
                                         <a href="#" class="uk-button uk-button-default uk-border-rounded uk-visible@s">
-                                            Discover platform
+                                            GuarantyFX
                                         </a>
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
                                     <img class="in-slide-img" src="{{ asset('landing/img/in-lazy.gif') }}"
-                                         data-src="{{ asset('landing/img/in-liquid-slide-4.svg') }}"
-                                         alt="image-slide" width="500" height="400" data-uk-img>
+                                         data-src="{{ asset('landing/img/in-liquid-slide-2.svg') }}" alt="image-slide"
+                                         width="500" height="400" data-uk-img>
                                 </div>
                             </div>
                         </div>
@@ -59,70 +58,13 @@
                 <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next
                    data-uk-slideshow-item="next"></a>
                 <div class="uk-section uk-padding-remove-vertical in-slideshow-features uk-visible@m">
-                    <div class="uk-container">
-                        <div class="uk-grid uk-flex uk-flex-center">
-                            <div class="uk-width-5-6@m">
-                                <div class="uk-grid uk-child-width-1-6@m uk-text-center" data-uk-grid>
-                                    <div class="uk-width-1-1">
-                                        <p class="uk-text-lead">1700+ market. Countless opportunities.</p>
-                                    </div>
-                                    <div class="slide-icons-1">
-                                        <img src="{{ asset('landing/img/in-lazy.gif') }}"
-                                             data-src="{{ asset('landing/img/in-liquid-icon-5.svg') }}"
-                                             alt="sample-icon"
-                                             width="48" height="48" data-uk-img>
-                                        <a class="uk-button uk-button-text uk-align-center" href="#">
-                                            Forex<i class="fas fa-angle-right uk-margin-small-left"></i>
-                                        </a>
-                                    </div>
-                                    <div class="slide-icons-1">
-                                        <img src="{{ asset('img/in-lazy.gif') }}"
-                                             data-src="{{ asset('landing/img/in-liquid-icon-6.svg') }}"
-                                             alt="sample-icon"
-                                             width="48" height="48" data-uk-img>
-                                        <a class="uk-button uk-button-text uk-align-center" href="#">
-                                            Indices<i class="fas fa-angle-right uk-margin-small-left"></i>
-                                        </a>
-                                    </div>
-                                    <div class="slide-icons-1">
-                                        <img src="{{ asset('landing/img/in-lazy.gif') }}"
-                                             data-src="{{ asset('landing/img/in-liquid-icon-7.svg') }}"
-                                             alt="sample-icon"
-                                             width="48" height="48" data-uk-img>
-                                        <a class="uk-button uk-button-text uk-align-center" href="#">
-                                            Crypto<i class="fas fa-angle-right uk-margin-small-left"></i>
-                                        </a>
-                                    </div>
-                                    <div class="slide-icons-1">
-                                        <img src="{{ asset('landing/img/in-lazy.gif') }}"
-                                             data-src="{{ asset('landing/img/in-liquid-icon-8.svg') }}"
-                                             alt="sample-icon"
-                                             width="48" height="48" data-uk-img>
-                                        <a class="uk-button uk-button-text uk-align-center" href="#">
-                                            Shares<i class="fas fa-angle-right uk-margin-small-left"></i>
-                                        </a>
-                                    </div>
-                                    <div class="slide-icons-1">
-                                        <img src="{{ asset('landing/img/in-lazy.gif') }}"
-                                             data-src="{{ asset('landing/img/in-liquid-icon-9.svg') }}"
-                                             alt="sample-icon"
-                                             width="48" height="48" data-uk-img>
-                                        <a class="uk-button uk-button-text uk-align-center" href="#">
-                                            Commodities<i class="fas fa-angle-right uk-margin-small-left"></i>
-                                        </a>
-                                    </div>
-                                    <div class="slide-icons-1">
-                                        <img src="{{ asset('landing/img/in-lazy.gif') }}"
-                                             data-src="{{ asset('landing/img/in-liquid-icon-10.svg') }}"
-                                             alt="sample-icon" width="48" height="48" data-uk-img>
-                                        <a class="uk-button uk-button-text uk-align-center" href="#">
-                                            All Markets<i class="fas fa-angle-right uk-margin-small-left"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                    <x-landing.hero-assets-list>
+                        <x-slot name="header">
+                            <div class="uk-width-1-1">
+                                <p class="uk-text-lead">1700+ market. Countless opportunities.</p>
                             </div>
-                        </div>
-                    </div>
+                        </x-slot>
+                    </x-landing.hero-assets-list>
                 </div>
             </div>
         </div>
@@ -134,9 +76,9 @@
                     <div class="uk-width-expand@m">
                         <h2>Discover a World of <span class="in-highlight">Opportunities</span>.</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisci eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam quis nostrud amet exercitation ullamco laboris
-                            nisi aliquip commodo cupidatat non consequat.
+                            We have a team of experienced traders who are ready to manage your investment. If you love
+                            the financial freedom that comes with access to the global financial markets, this is for
+                            you!
                         </p>
                         <div class="uk-grid-medium uk-child-width-1-3@s uk-child-width-1-3@m uk-margin-medium"
                              data-uk-grid>
@@ -162,8 +104,9 @@
                         </div>
                     </div>
                     <div class="uk-width-3-5@m uk-inline uk-dark">
-                        <img src="{{ asset('landing/img/in-lazy.gif') }}" data-src="img/in-liquid-object-4.svg"
-                             alt="sample-image" data-width data-height data-uk-img>
+                        <img src="{{ asset('landing/img/in-lazy.gif') }}"
+                             data-src="{{ asset('landing/img/world_image.svg') }}" alt="sample-image" data-width
+                             data-height data-uk-img>
                         <span class="uk-position-absolute uk-transform-center dot-pulse one"
                               style="left: 24%; top: 42%"></span>
                         <span class="uk-position-absolute uk-transform-center dot-pulse two"
@@ -187,8 +130,7 @@
                         <span class="uk-position-absolute uk-transform-center dot-pulse one"
                               style="left: 89%; top: 72%"></span>
                         <p class="uk-text-small uk-text-muted uk-text-center uk-margin-top">
-                            Graphic is for illustration purpose only and should not be relied upon for investment
-                            decisions.
+                            Graphic is for illustration purpose only and should not be relied upon for investment decisions.
                         </p>
                     </div>
                 </div>
@@ -202,39 +144,36 @@
                     <div class="uk-width-5-6@m uk-background-contain uk-background-center-center"
                          style="background-image: url({{ asset('landing/img/in-liquid-7-bg.png') }});" data-uk-img>
                         <div class="uk-text-center">
-                            <h2 class="uk-margin-remove">Liquid trading platform.</h2>
-                            <p class="uk-text-lead uk-text-muted uk-margin-small-top">
-                                Improve your trading results with our industry-leading technology
-                            </p>
+                            <h2 class="uk-margin-remove">GuarantyFX investment Platform.</h2>
+                            <p class="uk-text-lead uk-text-muted uk-margin-small-top">Improve your Investment earnings with our exclusive trading mechanics</p>
                         </div>
-                        <div
-                            class="uk-grid-medium uk-child-width-1-3@s uk-child-width-1-3@m uk-text-center uk-margin-top"
-                            data-uk-grid>
+                        <div class="uk-grid-medium uk-child-width-1-3@s uk-child-width-1-3@m uk-text-center uk-margin-top" data-uk-grid>
                             <div>
-                                <img src="{{ asset('landing/img/in-lazy.gif') }}" data-src="img/in-liquid-award.svg"
-                                     alt="wave-award"
+                                <img src="{{ asset('landing/img/in-lazy.gif') }}"
+                                     data-src="{{ asset('landing/img/in-liquid-award.svg') }}" alt="wave-award"
                                      width="71" height="58" data-uk-img>
                                 <h6 class="uk-margin-small-top uk-margin-remove-bottom">Best CFD Broker</h6>
                                 <p class="uk-text-small uk-margin-remove-top">TradeON Summit 2020</p>
                             </div>
                             <div>
-                                <img src="{{ asset('landing/img/in-lazy.gif') }}" data-src="img/in-liquid-award.svg"
-                                     alt="wave-award" width="71" height="58" data-uk-img>
+                                <img src="{{ asset('landing/img/in-lazy.gif') }}"
+                                     data-src="{{ asset('landing/img/in-liquid-award.svg') }}" alt="wave-award"
+                                     width="71" height="58" data-uk-img>
                                 <h6 class="uk-margin-small-top uk-margin-remove-bottom">Best Execution Broker</h6>
                                 <p class="uk-text-small uk-margin-remove-top">Forex EXPO Dubai 2020</p>
                             </div>
                             <div>
-                                <img src="{{ asset('landing/img/in-lazy.gif') }}" data-src="img/in-liquid-award.svg"
-                                     alt="wave-award" width="71" height="58" data-uk-img>
+                                <img src="{{ asset('landing/img/in-lazy.gif') }}"
+                                     data-src="{{ asset('landing/img/in-liquid-award.svg') }}" alt="wave-award"
+                                     width="71" height="58" data-uk-img>
                                 <h6 class="uk-margin-small-top uk-margin-remove-bottom">Best Trading Platform</h6>
                                 <p class="uk-text-small uk-margin-remove-top">London Summit 2020</p>
                             </div>
                         </div>
                         <img class="uk-align-center" src="{{ asset('landing/img/in-liquid-7-mockup.png') }}"
-                             data-src="{{ asset('landing/img/in-liquid-7-mockup.png') }}" alt="sample-images"
-                             width="691" height="420"
+                             data-src="{{ asset('landing/img/in-liquid-7-mockup.png') }}" alt="sample-images" width="691" height="420"
                              data-uk-img>
-                        <div
+                            <div
                             class="uk-grid-divider uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center in-offset-top-10"
                             data-uk-grid>
                             <div>
@@ -268,23 +207,21 @@
         <div class="uk-section in-liquid-15 in-offset-top-20 uk-background-contain uk-background-bottom-center"
              data-src="{{ asset('landing/img/in-liquid-15-bg.png') }}" data-uk-img>
             <div class="uk-container">
-                <div class="uk-grid uk-flex uk-flex-center">
+                <div class="uk-grid uk-flex uk-flex-center ">
                     <div class="uk-width-5-6@m">
                         <div class="uk-text-center">
-                            <h2 class="uk-margin-remove">Market analysis and trade inspiration.</h2>
+                            <h2 class="uk-margin-remove">Services We Offer at GuarantyFX</h2>
                             <p class="uk-text-lead uk-text-muted uk-margin-small-top">
-                                Get news, commentary and actionable trade ideas from the expert analysts.
+                                Professional Traders | Verified Performance | Low Drawdown | Consistent Profits
                             </p>
                         </div>
-                        <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-medium-top"
-                             data-uk-grid>
+                        <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-medium-top" data-uk-grid>
                             <div class="uk-width-1-2@s">
                                 <div class="uk-inline-clip">
                                     <a href="#">
                                         <img class="uk-border-rounded" src="{{ asset('landing/img/in-lazy.gif') }}"
                                              data-src="{{ asset('landing/img/in-liquid-15-image-1.jpg') }}"
-                                             alt="sample-image" data-width
-                                             data-height data-uk-img>
+                                             alt="sample-image" data-width data-height data-uk-img>
                                         <div class="uk-position-bottom uk-overlay uk-overlay-primary">
                                             <h4 class="uk-margin-remove">News and inspiration</h4>
                                             <p class="uk-margin-remove uk-text-muted">Economic news and prospect</p>
@@ -297,8 +234,7 @@
                                     <a href="#">
                                         <img class="uk-border-rounded" src="{{ asset('landing/img/in-lazy.gif') }}"
                                              data-src="{{ asset('landing/img/in-liquid-15-image-2.jpg') }}"
-                                             alt="sample-image" data-width
-                                             data-height data-uk-img>
+                                             alt="sample-image" data-width data-height data-uk-img>
                                         <div class="uk-position-bottom uk-overlay uk-overlay-primary">
                                             <h4 class="uk-margin-remove">Insight from experts</h4>
                                             <p class="uk-margin-remove uk-text-muted">Plan and trading strategy</p>
@@ -307,55 +243,46 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded">
+                                <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded " >
                                     <div class="uk-flex uk-flex-middle">
                                         <div class="uk-margin-small-right">
-                                            <i class="in-icon-wrap circle small green">EQ</i>
+                                            <i class="in-icon-wrap circle small green"></i>
                                         </div>
                                         <div>
-                                            <h6 class="uk-margin-remove">Stocks</h6>
+                                            <a href="#"><h6 class="uk-margin-remove">Investments</h6></a>
                                         </div>
                                     </div>
-                                    <p>Lorem ipsum dolor sit adipiscing elit, sed do eiusmod tempor.</p>
+                                    <p>A wide selection of investment product</p>
                                 </div>
                             </div>
+
                             <div>
                                 <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded">
                                     <div class="uk-flex uk-flex-middle">
                                         <div class="uk-margin-small-right">
-                                            <i class="in-icon-wrap circle small red">CFD</i>
+                                            <i class="in-icon-wrap circle small blue"></i>
                                         </div>
                                         <div>
-                                            <h6 class="uk-margin-remove">CFDs</h6>
+                                            <a href="copy_trading.html"><h6 class="uk-margin-remove">Copy Trading</h6></a>
                                         </div>
                                     </div>
-                                    <p>Lorem ipsum dolor sit adipiscing elit, sed do eiusmod tempor.</p>
+                                    <p>Trading account maintained by hand.</p>
                                 </div>
                             </div>
+
                             <div>
                                 <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded">
                                     <div class="uk-flex uk-flex-middle">
                                         <div class="uk-margin-small-right">
-                                            <i class="in-icon-wrap circle small blue">FX</i>
+                                            <i class="in-icon-wrap circle small red"></i>
                                         </div>
                                         <div>
-                                            <h6 class="uk-margin-remove">Forex</h6>
+                                            <a href="{{ route('home') }}">
+                                                <h6 class="uk-margin-remove">Account Management</h6>
+                                            </a>
                                         </div>
                                     </div>
-                                    <p>Lorem ipsum dolor sit adipiscing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded">
-                                    <div class="uk-flex uk-flex-middle">
-                                        <div class="uk-margin-small-right">
-                                            <i class="in-icon-wrap circle small grey">BO</i>
-                                        </div>
-                                        <div>
-                                            <h6 class="uk-margin-remove">Bonds</h6>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit adipiscing elit, sed do eiusmod tempor.</p>
+                                    <p>Dedicated financial consultant.</p>
                                 </div>
                             </div>
                         </div>

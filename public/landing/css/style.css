@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* #2e3092 --> primary*/
+/* #00aeef -->secondary*/
+
 /* ------------------------------------------------------------------
  * File         : style.css
  * Author       : indonez
@@ -41,7 +44,7 @@ body {
 
 .in-button-app:hover {
     transition: all ease 200ms;
-    background-color: #fc5b3f;
+    background-color: #2e3092;
 }
 
 @media (max-width: 960px) {
@@ -52,7 +55,7 @@ body {
 }
 
 .in-highlight {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-list-check li::before {
@@ -61,7 +64,7 @@ body {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: "\f00c";
-    color: #fc5b3f;
+    color: #2e3092;
     top: 2px;
     left: 4px;
 }
@@ -281,7 +284,7 @@ header .uk-navbar-dropdown li {
 }
 
 .in-slideshow .in-slideshow-features .slide-icons-1 i {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-slideshow .in-slideshow-features .slide-icons-2 {
@@ -422,7 +425,7 @@ footer .in-trading-risk {
 }
 
 .in-blog-1 .uk-card-default a.uk-button-text {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-blog-1 .uk-card-default a.uk-button-text:hover {
@@ -449,7 +452,7 @@ footer .in-trading-risk {
 }
 
 .in-blog-3 .uk-card-default a.uk-button-text {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-blog-3 .uk-card-default a.uk-button-text:hover {
@@ -467,7 +470,7 @@ footer .in-trading-risk {
 }
 
 .in-blog-4 a.uk-button-text {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-blog-4 a.uk-button-text:hover {
@@ -573,7 +576,7 @@ footer .in-trading-risk {
 
 .in-widget-tag a:hover .uk-label {
     transition: all ease .5s;
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     color: #fff;
 }
 
@@ -1131,17 +1134,17 @@ footer .in-trading-risk {
 }
 
 .in-content-11 .uk-card-default:hover {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
     text-decoration: none;
 }
 
 .in-content-11 .uk-card-default:hover h4 {
-    color: #fc5b3f;
+    color: #2e3092;
     transition: all ease .5s;
 }
 
 .in-content-11 .uk-card-default:hover .in-icon-wrap {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     transition: all ease .5s;
 }
 
@@ -1177,13 +1180,13 @@ footer .in-trading-risk {
     font-style: normal;
     font-weight: 900;
     font-size: 14px;
-    color: #fc5b3f;
+    color: #2e3092;
     margin: 5px 12px 5px 0;
     float: left;
 }
 
 .in-faq-1 .uk-open .uk-accordion-title {
-    color: #fc5b3f;
+    color: #2e3092;
     border-bottom: 0;
 }
 
@@ -1231,7 +1234,7 @@ footer .in-trading-risk {
 }
 
 .in-faq-2 .uk-open .uk-accordion-title .uk-card {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     color: #fff;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -1280,7 +1283,7 @@ footer .in-trading-risk {
 }
 
 .in-faq-3 .uk-open .uk-accordion-title {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-faq-3 .uk-accordion-content {
@@ -1317,7 +1320,7 @@ footer .in-trading-risk {
 }
 
 .in-faq-4 .uk-open .uk-accordion-title {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-faq-4 .uk-accordion-content {
@@ -1340,7 +1343,7 @@ footer .in-trading-risk {
 }
 
 .in-faq-5 .uk-open .uk-accordion-title {
-    color: #fc5b3f;
+    color: #2e3092;
     border-bottom: 0;
 }
 
@@ -1475,22 +1478,22 @@ footer .in-trading-risk {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: "\f00c";
-    color: #fc5b3f;
+    color: #2e3092;
     top: 1px;
     left: 4px;
 }
 
 .in-pricing-1.in-pricing-featured .uk-card {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-1.in-pricing-featured .uk-card:hover {
     background-color: white;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-1.in-pricing-featured .uk-card-header .uk-label {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
 }
 
 .in-pricing-2 .uk-card {
@@ -1535,11 +1538,11 @@ footer .in-trading-risk {
 
 .in-pricing-2.in-pricing-featured .uk-card:hover {
     background-color: white;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-2.in-pricing-featured .uk-card-header {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
 }
 
 .in-pricing-3 .uk-card {
@@ -1580,16 +1583,16 @@ footer .in-trading-risk {
 }
 
 .in-pricing-3.in-pricing-featured .uk-card {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-3.in-pricing-featured .uk-card:hover {
     background-color: white;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-3.in-pricing-featured .uk-card-header {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-3.in-pricing-featured .uk-card-body .uk-list-divider>li:nth-child(n+2) {
@@ -1632,26 +1635,26 @@ footer .in-trading-risk {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: "\f00c";
-    color: #fc5b3f;
+    color: #2e3092;
     top: 1px;
     left: 4px;
 }
 
 .in-pricing-4.in-pricing-featured .uk-card {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-4.in-pricing-featured .uk-card:hover {
     background-color: white;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-4.in-pricing-featured .uk-card-header {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-4.in-pricing-featured .uk-card-header .in-icon-wrap {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     color: #fff;
 }
 
@@ -1705,16 +1708,16 @@ footer .in-trading-risk {
 }
 
 .in-pricing-5.in-pricing-featured .uk-card {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-5.in-pricing-featured .uk-card:hover {
     background-color: white;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-5.in-pricing-featured .uk-card-header .uk-label {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
 }
 
 .in-pricing-6 .uk-card {
@@ -1767,22 +1770,22 @@ footer .in-trading-risk {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: "\f00c";
-    color: #fc5b3f;
+    color: #2e3092;
     top: 1px;
     left: 4px;
 }
 
 .in-pricing-6.in-pricing-featured .uk-card-default:hover {
     background-color: white;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-6.in-pricing-featured .uk-card-header {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-pricing-6.in-pricing-featured .uk-card-header .uk-label {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
 }
 
 /* team component */
@@ -1922,7 +1925,7 @@ footer .in-trading-risk {
 .in-timeline-2 .in-timeline-item:before {
     width: 13px;
     height: 13px;
-    background: #fc5b3f;
+    background: #2e3092;
     border: 10px solid #fff;
     border-radius: 50%;
     position: absolute;
@@ -2020,7 +2023,7 @@ body>div.in-loader div {
     width: 1rem;
     height: 1rem;
     margin: 2rem 0.3rem;
-    background: #fc5b3f;
+    background: #2e3092;
     border-radius: 50%;
     -webkit-animation: 0.9s bounce infinite alternate;
             animation: 0.9s bounce infinite alternate;
@@ -2217,7 +2220,7 @@ a.in-generic-email:hover {
 }
 
 .in-icon-wrap.primary-color {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     color: #fff;
 }
 
@@ -2470,7 +2473,7 @@ a.in-generic-email:hover {
     position: fixed;
     right: 40px;
     bottom: 40px;
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     border-radius: 6px;
     opacity: 0;
 }
@@ -8356,7 +8359,7 @@ readers do not read off random characters that represent icons */
 /* [ 9. custom ] */
 .in-liquid-label {
     font-size: 12px;
-    color: #fc5b3f;
+    color: #2e3092;
     letter-spacing: 1px;
     text-transform: uppercase;
     background-color: transparent;
@@ -8418,7 +8421,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-2 .uk-card-default h4 {
-    color: #fc5b3f;
+    color: #2e3092;
     margin-top: -53px;
 }
 
@@ -8432,12 +8435,12 @@ readers do not read off random characters that represent icons */
     width: 44px;
     height: 44px;
     background-color: #fff;
-    box-shadow: inset 0px 0px 0px 2px #fc5b3f;
+    box-shadow: inset 0px 0px 0px 2px #2e3092;
     border: 18px solid #fff;
     font-size: 18px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
-    color: #fc5b3f;
+    color: #2e3092;
     margin-bottom: -25px;
     position: relative;
     z-index: 0.1;
@@ -8578,7 +8581,7 @@ readers do not read off random characters that represent icons */
 
 .in-liquid-4 .in-liquid-category .uk-text-uppercase {
     letter-spacing: 1px;
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-liquid-4 .in-liquid-category .uk-text-small {
@@ -8589,7 +8592,7 @@ readers do not read off random characters that represent icons */
 .in-liquid-4 .in-liquid-category::before {
     width: 1px;
     height: 98%;
-    background-color: #fc5b3f;
+    background-color: #2e3092;
     content: '';
     position: absolute;
     top: 0;
@@ -8696,13 +8699,13 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-6 .in-count-wrap:hover {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
     transition: all ease 400ms;
     cursor: default;
 }
 
 .in-liquid-6 .in-count-wrap:hover .uk-text-lead {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-liquid-6 .dot-pulse {
@@ -8786,9 +8789,9 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-7 .uk-button-secondary {
-    color: #fc5b3f;
+    color: #2e3092;
     background-color: transparent;
-    box-shadow: inset 0px 0px 0px 2px #fc5b3f;
+    box-shadow: inset 0px 0px 0px 2px #2e3092;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -8815,14 +8818,14 @@ readers do not read off random characters that represent icons */
 .in-liquid-8 .uk-card-default {
     background-color: transparent;
     border-radius: 10px;
-    border: 1px solid #fc5b3f;
+    border: 1px solid #2e3092;
     cursor: default;
     padding: 15px;
 }
 
 .in-liquid-8 .uk-card-default h6,
 .in-liquid-8 .uk-card-default i {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-liquid-8 .in-liquid-video {
@@ -8893,7 +8896,7 @@ readers do not read off random characters that represent icons */
 .in-liquid-9 .uk-card {
     background-color: transparent;
     border-radius: 10px;
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-liquid-9 .uk-card i {
@@ -8910,7 +8913,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-9 .uk-card .uk-grid-divider> ::before {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
 }
 
 .in-liquid-9 .uk-card-body {
@@ -8994,7 +8997,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-12 {
-    background-color: #fc5b3f;
+    background-color: #2e3092;
 }
 
 .in-liquid-12 blockquote p {
@@ -9045,7 +9048,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-13 .in-app-style {
-    border-color: #fc5b3f;
+    border-color: #2e3092;
     padding: 30px 22px;
 }
 
@@ -9071,7 +9074,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-13 .uk-subnav i {
-    color: #fc5b3f;
+    color: #2e3092;
     font-size: 18px;
 }
 
@@ -9165,7 +9168,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-14 .uk-button {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 @media (max-width: 960px) {
@@ -9226,7 +9229,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-15 .uk-card-body .uk-button {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-liquid-15 .in-icon-wrap {
@@ -9272,12 +9275,12 @@ readers do not read off random characters that represent icons */
 }
 
 .in-liquid-16 .in-liquid-16-counter {
-    border-bottom: 1px solid #fc5b3f;
+    border-bottom: 1px solid #2e3092;
     padding-bottom: 10px;
 }
 
 .in-liquid-16 .in-liquid-16-counter p {
-    color: #fc5b3f;
+    color: #2e3092;
 }
 
 .in-liquid-16 .in-client-logo-4 .uk-tile {
@@ -9322,7 +9325,7 @@ readers do not read off random characters that represent icons */
 }
 
 .in-content-8 .uk-button-default:hover {
-    color: #fc5b3f;
+    color: #2e3092;
     background-color: transparent;
-    box-shadow: inset 0px 0px 0px 2px #fc5b3f;
+    box-shadow: inset 0px 0px 0px 2px #2e3092;
 }
