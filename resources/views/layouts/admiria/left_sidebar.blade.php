@@ -23,7 +23,7 @@
                 </li>
                 <li>
                     <a href="{{ route('admin.signals.index') }}" class="waves-effect">
-                        <i class="mdi mdi-account-supervisor-circle "></i>
+                        <i class="mdi mdi-access-point-network "></i>
                         <span>Signals</span>
                     </a>
                 </li>
