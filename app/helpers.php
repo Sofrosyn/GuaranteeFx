@@ -1,0 +1,19 @@
+<?php
+
+if (!function_exists('int_random')) {
+    function int_random(int $length):int
+    {
+        $min  = str_repeat(1, $length);
+        $max = str_repeat(9, $length);
+        return random_int($min, $max);
+    }
+}
+
+if (!function_exists('remove_html')) {
+    function remove_html(?string $raw_string)
+    {
+        $stripped_html = strip_tags($raw_string);
+
+        return str_replace('&nbsp;', ' ', $stripped_html);
+    }
+}

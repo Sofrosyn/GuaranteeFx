@@ -1,0 +1,5 @@
+{
+    "auth": {
+        "invalid_credentials": "Invalid email or password"
+    }
+}
