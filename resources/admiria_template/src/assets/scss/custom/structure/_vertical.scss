@@ -1,6 +1,6 @@
 //
 // _menu.scss
-//
+// 
 
 .metismenu {
     margin: 0;
@@ -254,7 +254,7 @@
                         padding: 15px 20px;
                         min-height: 55px;
                         transition: none;
-
+                        
                         &:hover,
                         &:active,
                         &:focus {
@@ -360,11 +360,11 @@
 
 body[data-sidebar="dark"] {
     .vertical-menu {
-        background: linear-gradient($sidebar-dark-bg, #005f5a);
+        background: $sidebar-dark-bg;
     }
 
     #sidebar-menu {
-
+    
         ul {
             li {
                 a {
@@ -373,7 +373,7 @@ body[data-sidebar="dark"] {
                     i {
                         color: $sidebar-dark-menu-item-icon-color;
                     }
-
+    
                     &:hover {
                         color: $sidebar-dark-menu-item-hover-color;
 
@@ -417,7 +417,7 @@ body[data-sidebar="dark"] {
 
                 > ul {
                     > li {
-
+                        
                         &:hover {
                             > a {
                                 background: lighten($sidebar-dark-bg, 2%);
@@ -441,11 +441,11 @@ body[data-sidebar="dark"] {
                     ul{
                         background-color: $sidebar-dark-bg;
                     }
-
+                    
                 }
 
                 ul{
-
+                    
                     li{
                         &.mm-active .active{
                             color: $sidebar-menu-item-active-color;
@@ -615,7 +615,7 @@ body[data-sidebar="colored"] {
 
                     &:hover {
                         color: $white;
-
+    
                         i {
                             color: $white;
                         }
@@ -683,15 +683,15 @@ body[data-sidebar="colored"] {
         }
     }
 }
-
+    
 //RTL
 
-[dir="rtl"]
+[dir="rtl"] 
 #sidebar-menu {
     .has-arrow {
         &:after {
             content: "\F0141";
-
+            
         }
     }
     .mm-active {

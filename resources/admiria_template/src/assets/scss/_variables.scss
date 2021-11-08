@@ -17,13 +17,13 @@ $sidebar-collapsed-width:  70px;
 $sidebar-width-sm:  160px;
 
 // Vertical Sidebar - Dark
-$sidebar-dark-bg: #016935; //2c313a
-$sidebar-dark-menu-item-color: rgba(#e7e9df,.7);
-$sidebar-dark-menu-sub-item-color: rgba(#e7e9df,.7);
-$sidebar-dark-menu-item-icon-color: rgba(#e7e9df,.7);
+$sidebar-dark-bg: #263238; //2c313a
+$sidebar-dark-menu-item-color: rgba($white,.5);
+$sidebar-dark-menu-sub-item-color: rgba($white,.5);
+$sidebar-dark-menu-item-icon-color: rgba($white,.5);
 $sidebar-dark-menu-item-hover-color: #ffffff;
-$sidebar-dark-menu-item-active-color: #016935;
-$sidebar-dark-menu-item-active-bg: #ffe081;
+$sidebar-dark-menu-item-active-color: #ffffff;
+$sidebar-dark-menu-item-active-bg: #2a373e;
 
 // Topbar - Deafult Light
 $header-height: 70px;
@@ -46,7 +46,7 @@ $footer-color: #74788d;
 $topnav-bg:   #263238;
 
 $menu-item-color: #707070;
-$menu-item-active-color: #00927a;
+$menu-item-active-color: #67a8e4;
 
 // Right Sidebar
 $rightbar-width:  280px;
@@ -55,7 +55,7 @@ $rightbar-width:  280px;
 $display-none: none;
 $display-block: block;
 
-// Brand
+// Brand 
 $navbar-brand-box-width: 240px;
 
 // Secondary font
@@ -85,7 +85,7 @@ $btn-close-bg-dark:          url("data:image/svg+xml,<svg xmlns='http://www.w3.o
 // eff2f7
 $white:    #fff;
 $gray-100: #f7f7f7;
-$gray-200: #f3f3f3;
+$gray-200: #f3f3f3;  
 $gray-300: #eeeeee;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
@@ -141,8 +141,8 @@ $colors: (
 );
 // scss-docs-end colors-map
 
-$primary:       #312651;
-$secondary:     #ff7754;
+$primary:       $blue;
+$secondary:     $gray-600;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;

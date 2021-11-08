@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <title>
         @isset($title)
-            {{ $title }} | {{ config('app.name') }}
+            {{ $title }} - {{ config('app.name') }}
         @else
-            @hasSection('title')@yield('title') | @endif{{ config('app.name') }}
+            @hasSection('title')@yield('title') - @endif{{ config('app.name') }}
         @endisset
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        content="{{ config('app.name') }} is an all in ine solution for job seekers, employers and human resource managers"
-          name="description">
     <meta content="{{ config('app.name') }}" name="author">
     <link rel="icon" type="image/png" href="{{ asset('images/hrplug.png') }}" />
 
@@ -26,18 +23,32 @@
 
     @livewireScripts
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
-
     @stack('head')
 
 </head>
 
-<body data-layout="horizontal">
+<body data-sidebar="dark">
 
 <!-- Loader -->
 <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 
-@yield('page')
+
+<div id="layout-wrapper">
+
+    @include('layouts.admiria.topbar')
+
+    @include('layouts.admiria.left_sidebar')
+
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                @yield('breadcrumb')
+                @yield('content')
+            </div>
+        </div>
+        @include('layouts.admiria.footer')
+    </div>
+</div>
 
 <script src="{{ asset('js/app.js') }}"></script>
 

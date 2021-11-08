@@ -16,6 +16,7 @@
         "laravel/ui": "^3.3",
         "livewire/livewire": "^2.5",
         "mews/purifier": "^3.3",
+        "power-components/livewire-powergrid": "^1.4",
         "spatie/laravel-medialibrary": "^7.0.0"
     },
     "require-dev": {

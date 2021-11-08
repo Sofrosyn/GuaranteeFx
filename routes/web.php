@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\Web\ContactController;
-use App\Http\Controllers\Web\WelcomeController;
+use App\Http\Controllers\Web\Admin;
+use App\Http\Controllers\Web\Customer\ContactController;
+use App\Http\Controllers\Web\Customer\WelcomeController;
+use App\Http\Livewire\Admin\Signals\ManageSignal;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +38,14 @@ Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
 
 Auth::routes(['verify' => true]);
 
-Route::group(['middleware' => 'auth', 'prefix' => 'home',], function () {
+Route::group(['middleware' => ['auth', 'redirect_admins'], 'prefix' => 'home',], function () {
     Route::get('', fn() => "Hello")->name('home');
+});
+
+Route::group(['middleware' => ['auth', 'admin'], 'as' => 'admin.', 'prefix' => 'admin'], function () {
+    Route::get('', Admin\DashboardController::class)->name('dashboard');
+    Route::get('users', [Admin\UsersController::class, 'index'])->name('users.index');
+
+    Route::get('signals/create', ManageSignal::class)->name('signals.create');
+    Route::resource('signals', Admin\SignalController::class)->only(['index', 'destroy']);
 });

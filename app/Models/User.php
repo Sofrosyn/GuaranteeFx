@@ -45,7 +45,7 @@ class User extends Authenticatable implements HasMedia, MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'is_admin' => 'datetime',
+        'is_admin' => 'bool',
     ];
 
     public function getAvatarUrlAttribute()
@@ -55,5 +55,10 @@ class User extends Authenticatable implements HasMedia, MustVerifyEmail
         }
 
         return $media->getFullUrl();
+    }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
     }
 }

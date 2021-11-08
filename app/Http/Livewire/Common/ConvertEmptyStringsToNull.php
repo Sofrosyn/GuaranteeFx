@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Common;
 
+use Symfony\Component\HttpFoundation\File\File;
+
 /**
  * @see https://github.com/livewire/livewire/issues/823#issuecomment-821074805
  */
@@ -22,6 +24,10 @@ trait ConvertEmptyStringsToNull
 
     protected function cleanInput($input)
     {
+        if ($input instanceof File) {
+            return $input;
+        }
+
         if (!is_array($input)) {
             return trim($input) == '' ? null : trim($input);
         }

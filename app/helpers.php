@@ -17,3 +17,10 @@ if (!function_exists('remove_html')) {
         return str_replace('&nbsp;', ' ', $stripped_html);
     }
 }
+
+if (!function_exists('full_name_regex')) {
+    function full_name_regex(): string
+    {
+        return "/^\w+\s\w++(\s\w+)?$/i";
+    }
+}
