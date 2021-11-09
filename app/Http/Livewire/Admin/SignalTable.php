@@ -30,7 +30,7 @@ class SignalTable extends PowerGridComponent
     */
     public function setUp()
     {
-        $this->showCheckBox()
+        $this
             ->showPerPage()
             // ->showExportOption('download', ['excel', 'csv'])
             ->showRecordCount('short')
@@ -199,9 +199,9 @@ class SignalTable extends PowerGridComponent
     {
         /** @var Signal $signal */
         $signal = Signal::query()->where('id', $data['id'])->firstOrFail();
-        $url = $signal->getFirstMedia()->getFullUrl();
+        $video = $signal->getFirstMedia();
 
-        $this->dispatchBrowserEvent('goToVideo', ['url' => $url]);
+        $this->dispatchBrowserEvent('goToVideo', ['url' => $video->getFullUrl(), 'type' => $video->mime_type]);
     }
 
     public function initiateDelete($data)

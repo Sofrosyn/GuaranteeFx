@@ -24,10 +24,10 @@ class UserTable extends PowerGridComponent
     */
     public function setUp()
     {
-        $this->showCheckBox()
+        $this
             ->showPerPage()
             ->showRecordCount('short')
-            ->showExportOption('download', ['excel', 'csv'])
+            // ->showExportOption('download', ['excel', 'csv'])
             ->showSearchInput();
     }
 
