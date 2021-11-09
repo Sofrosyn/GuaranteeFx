@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
+namespace App\Http\Livewire\Customer;
 
 use App\Models\Signal;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\URL;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
 use PowerComponents\LivewirePowerGrid\PowerGrid;
@@ -18,12 +19,12 @@ class SignalTable extends PowerGridComponent
 
     protected $listeners = [
         'goToVideo',
-        'initiateDelete'
     ];
+
 
     public function booted()
     {
-        abort_if(!auth()->user()->is_admin, 403);
+        $this->ensureUserHasSubscribed();
     }
 
     /*
@@ -77,7 +78,6 @@ class SignalTable extends PowerGridComponent
     public function addColumns(): ?PowerGridEloquent
     {
         return PowerGrid::eloquent()
-            ->addColumn('id')
             ->addColumn('title')
             ->addColumn('video_url', function (Signal $signal) {
                 return optional($signal->media[0])->getFullUrl();
@@ -102,10 +102,6 @@ class SignalTable extends PowerGridComponent
     {
         return [
             Column::add()
-                ->title(__('ID'))
-                ->field('id'),
-
-            Column::add()
                 ->title(__('TITLE'))
                 ->field('title')
                 ->sortable()
@@ -114,19 +110,11 @@ class SignalTable extends PowerGridComponent
                 ->makeInputText(),
 
             Column::add()
-                ->title(__('CREATED AT'))
+                ->title(__('Date'))
                 ->field('created_at_formatted')
                 ->searchable()
                 ->sortable('created_at')
             // ->makeInputDatePicker('created_at')
-            ,
-
-            Column::add()
-                ->title(__('UPDATED AT'))
-                ->field('updated_at_formatted')
-                ->searchable()
-                ->sortable('updated_at')
-            // ->makeInputDatePicker('updated_at')
             ,
 
         ];
@@ -144,14 +132,9 @@ class SignalTable extends PowerGridComponent
     {
         return [
             Button::add('video')
-                ->caption(__('Video'))
+                ->caption(__('Watch Video'))
                 ->class('')
                 ->emit('goToVideo', ['id' => 'id']),
-
-            Button::add('destroy')
-                ->caption(__('Delete'))
-                ->class('text-danger')
-                ->emit('initiateDelete', ['id' => 'id'])
         ];
     }
 
@@ -206,16 +189,14 @@ class SignalTable extends PowerGridComponent
         $signal = Signal::query()->where('id', $data['id'])->firstOrFail();
         $video = $signal->getFirstMedia();
 
-        $this->dispatchBrowserEvent('goToVideo', ['url' => $video->getFullUrl(), 'type' => $video->mime_type]);
+        $this->dispatchBrowserEvent('goToVideo', [
+            'url' => URL::temporarySignedRoute('home.signals.video', now()->addHours(6), ['signal' => $signal]),
+            'type' => $video->mime_type
+        ]);
     }
 
-    public function initiateDelete($data)
+    private function ensureUserHasSubscribed()
     {
-        /** @var Signal $signal */
-        $signal = Signal::query()->where('id', $data['id'])->firstOrFail();
-
-        $this->dispatchBrowserEvent('initiateDelete', [
-            'title' => $signal->title, 'action' => route('admin.signals.destroy', $signal)
-        ]);
+        abort_if(!auth()->user()->is_subscribed, 403, 'Subscription is required.');
     }
 }

@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Controllers\Web\Admin;
-use App\Http\Controllers\Web\Customer\ContactController;
-use App\Http\Controllers\Web\Customer\WelcomeController;
+use App\Http\Controllers\Web\Customer;
 use App\Http\Livewire\Admin\Signals\ManageSignal;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', WelcomeController::class)->name('welcome');
+Route::get('/', Customer\WelcomeController::class)->name('welcome');
 Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
     Route::get('contact', [ContactController::class, 'showForm'])->name('contact');
     Route::post('contact', [ContactController::class, 'submit']);
@@ -38,8 +37,21 @@ Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
 
 Auth::routes(['verify' => true]);
 
+Route::any('stripe/callback/{status}', [Customer\Payment\StripeController::class, 'handleCallback'])
+    ->where('status', 'success|cancelled')
+    ->name('stripe-callback');
+Route::post('stripe/webhook', [Customer\Payment\StripeController::class, 'handleWebhook']);
+
 Route::group(['middleware' => ['auth', 'redirect_admins'], 'prefix' => 'home',], function () {
-    Route::get('', fn() => "Hello")->name('home');
+    Route::get('', [Customer\HomeController::class, 'showDashboard'])->name('home');
+    Route::get('signals', [Customer\HomeController::class, 'showSignals'])->name('home.signals');
+    Route::get('signals{signal}/video', [Customer\HomeController::class, 'streamSignalVideo'])
+        ->middleware('signed')
+        ->name('home.signals.video');
+
+    Route::group(['prefix' => 'payments', 'as' => 'payments.'], function () {
+       Route::get('new', [Customer\Payment\StripeController::class, 'redirectTOCheckout'])->name('new');
+    });
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'as' => 'admin.', 'prefix' => 'admin'], function () {

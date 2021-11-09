@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web\Admin;
 
+use App\Models\Signal;
 use App\Models\User;
 
 class DashboardController
@@ -10,6 +11,7 @@ class DashboardController
     {
         return view('admin.dashboard', [
             'users' => User::query()->count(),
+            'signals' => Signal::query()->count()
         ]);
     }
 }

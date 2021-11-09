@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="{{ $dash_index = route('admin.dashboard') }}" class="logo logo-dark">
+                <a href="{{ $dash_index = route('welcome') }}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ $logo_url = asset('landing/img/logo.png') }}" alt="" height="22">
                     </span>
@@ -45,10 +45,12 @@
                          src="{{ asset('images/avatar_placeholder.png') }}" alt="{{ config('app.name') }}">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item" href="#">My Wallet</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger logout-btn" href="#">Logout</a>
-                    <form action="{{ route('logout') }}" method="post" id="logout-form" style="display: none">@csrf</form>
+                    {{--<a class="dropdown-item" href="#">My Wallet</a>
+                    <div class="dropdown-divider"></div>--}}
+                    <form action="{{ route('logout') }}" method="post" id="topbar-logout-form" style="display: none">@csrf</form>
+                    <a class="dropdown-item text-danger logout-btn"
+                       onclick="document.getElementById('topbar-logout-form').submit()"
+                       href="#/">Logout</a>
                 </div>
             </div>
         </div>

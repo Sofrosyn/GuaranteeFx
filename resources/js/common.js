@@ -53,4 +53,28 @@ function createCkEditorInstance(element) {
         });
 }
 
+function prepareForSignalVideo() {
+    window.addEventListener('goToVideo', event => {
+        let player = videojs('signal-video-player');
+        player.src({type: event.detail.type, src:event.detail.url});
+
+        let modelHolder = document.getElementById('signal-video-modal');
+        let modal = bootstrap.Modal.getOrCreateInstance(modelHolder);
+        modal.show();
+
+        modelHolder.addEventListener('hide.bs.modal', () => {
+            player.pause();
+        })
+    });
+    window.addEventListener('initiateDelete', event => {
+        if (!confirm(`Are you sure to delete "${event.detail.title}"? This cannot be undone`)) {
+            return;
+        }
+
+        let target = document.getElementById('delete-form');
+        target.action = event.detail.action;
+        target.submit();
+    });
+}
+
 enableBSPopovers();

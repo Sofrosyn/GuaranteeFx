@@ -57,8 +57,23 @@ class User extends Authenticatable implements HasMedia, MustVerifyEmail
         return $media->getFullUrl();
     }
 
+    public function getIsSubscribedAttribute()
+    {
+        return $this->completed_payments()->exists();
+    }
+
     public function country()
     {
         return $this->belongsTo(Country::class);
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    public function completed_payments()
+    {
+        return $this->payments()->where('status', 'paid')->whereNotNull('paid_at');
     }
 }
