@@ -5,7 +5,7 @@
         <div class="uk-container">
             <div class="uk-grid">
                 <div class="uk-width-1-1">
-                    <ul class="uk-breadcrumb"></ul>
+
                 </div>
             </div>
         </div>

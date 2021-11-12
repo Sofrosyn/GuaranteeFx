@@ -130,7 +130,10 @@
                                     </div>
                                     <div class="uk-width-expand@m">
                                         <h3>Trading instruments</h3>
-                                        <p>Reprehenderit qui in svoluptate velit esse quam molestiae vel illum qui dolorem fugiat quo.</p>
+                                        <p>
+                                                Access your account anywhere in the world, leverage the insights of
+                                                professional traders and manage your assets with ease.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="uk-margin-large" data-uk-grid>
@@ -142,7 +145,10 @@
                                     </div>
                                     <div class="uk-width-expand@m">
                                         <h3>Countries covered</h3>
-                                        <p>At vero deleniti eto accusamus blanditiis praesentium voluta iusto dignissimos ducimus.</p>
+                                        <p>
+                                            Trade your favourite instruments from around the world with experts in-real
+                                            time using our copy trading tools.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +168,7 @@
                         <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
                             <div class="uk-grid uk-flex-middle" data-uk-grid>
                                 <div class="uk-width-1-1 uk-width-expand@m">
-                                    <h3>Get up to 100% ROI per investment on all Assets &amp; forex trades</h3>
+                                    <h3>Get up to 50% ROI per investment on all Assets &amp; forex trades</h3>
                                 </div>
                                 <div class="uk-width-auto">
                                     <a class="uk-button uk-button-primary uk-border-rounded"

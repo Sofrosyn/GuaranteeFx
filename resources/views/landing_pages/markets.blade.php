@@ -136,32 +136,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="uk-width-1-3@m">
-                        <h3>Our Shares offer</h3>
-                        <table class="uk-table uk-table-divider uk-table-striped uk-text-small uk-text-center">
-                            <thead>
-                                <tr>
-                                    <th class="uk-text-center">Name</th>
-                                    <th class="uk-text-center">Initial Deposit</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Apple Inc CFD</td>
-                                    <td>10%</td>
-                                </tr>
-                                <tr>
-                                    <td>Alibaba CFD</td>
-                                    <td>10%</td>
-                                </tr>
-                                <tr>
-                                    <td>Facebook CFD</td>
-                                    <td>10%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="uk-text-small"><a href="#">See Full Shares Table</a></p>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -174,7 +148,7 @@
                         <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
                             <div class="uk-grid uk-flex-middle" data-uk-grid>
                                 <div class="uk-width-1-1 uk-width-expand@m">
-                                    <h3>Get up to 100% ROI per investment on all Assets &amp; forex trades</h3>
+                                    <h3>Get up to 50% ROI per investment on all Assets &amp; forex trades</h3>
                                 </div>
                                 <div class="uk-width-auto">
                                     <a class="uk-button uk-button-primary uk-border-rounded"

@@ -62,7 +62,6 @@
         <div class="uk-container uk-text-small">
             <div class="uk-child-width-1-2@m" data-uk-grid>
                 <div class="in-footer-logo">
-                    <img src="img/in-lazy.gif" data-src="img/in-logo-1.svg" alt="logo" width="127" height="27" data-uk-img>
                 </div>
                 <div class="uk-flex uk-flex-right@m">
                     <div class="in-footer-socials">
@@ -106,7 +105,18 @@
                     </ul>
                 </div>
 
-                in-logo-1.svg
+            </div>
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-1-1">
+                    <p class="uk-heading-line uk-margin-large-bottom"><span>Copyright ©2021 GuarantyFX. All Rights Reserved.</span></p>
+                    <p class="in-trading-risk">
+                        Trading derivatives and leveraged products carries a high level of risk, including the risk of
+                        losing substantially more than your initial investment. It is not suitable for everyone. Before
+                        you make any decision in relation to a financial product you should obtain and consider our
+                        Product Disclosure Statement (PDS) and Financial Services Guide (FSG) available on our website
+                        and seek independent advice if necessary
+                    </p>
+                </div>
             </div>
         </div>
         <!-- footer content end -->

@@ -49,15 +49,7 @@
                                         <i class="fas fa-envelope fa-sm in-icon-wrap circle small primary-color"></i>
                                     </div>
                                     <div>
-                                        <p class="uk-margin-remove">business@company.com</p>
-                                    </div>
-                                </div>
-                                <div class="uk-flex uk-flex-middle uk-margin">
-                                    <div class="uk-margin-small-right">
-                                        <i class="fas fa-phone fa-sm in-icon-wrap circle small primary-color"></i>
-                                    </div>
-                                    <div>
-                                        <p class="uk-margin-remove">(888)234-5686</p>
+                                        <p class="uk-margin-remove">business@GuarantyFX.com</p>
                                     </div>
                                 </div>
                                 <hr class="uk-margin-medium">

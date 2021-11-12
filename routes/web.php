@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Customer\WelcomeController::class)->name('welcome');
 Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
-    Route::get('contact', [ContactController::class, 'showForm'])->name('contact');
-    Route::post('contact', [ContactController::class, 'submit']);
+    Route::get('contact', [Customer\ContactController::class, 'showForm'])->name('contact');
+    Route::post('contact', [Customer\ContactController::class, 'submit']);
 
     Route::view('services', 'landing_pages.services')->name('signals');
     Route::view('account-management', 'landing_pages.account_management')->name('account_management');
