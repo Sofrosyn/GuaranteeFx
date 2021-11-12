@@ -33,7 +33,7 @@ class SuccessfulPaymentMail extends Mailable
         return $this
             ->subject(sprintf('Unlimited Access to %s', config('app.name')))
             ->to($this->registration->email)
-            ->view('mail.successful-payment-mail', [
+            ->markdown('mail.successful-payment-mail', [
                 'user' => $this->registration,
             ]);
     }
