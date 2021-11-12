@@ -22,7 +22,7 @@ class StripeController
     public function redirectTOCheckout(Registration $registration)
     {
        $description =  config('app.name') . " Subscription";
-        $url = $this->stripeManager->createCheckout($description, $registration->email, 2000);
+        $url = $this->stripeManager->createCheckout($description, $registration->email, settings('registration_fee') * 100);
 
         return redirect()->away($url, 303);
     }
@@ -75,6 +75,10 @@ class StripeController
 
         /** @var Registration $user */
         $user = Registration::query()->where('email', $user_email)->firstOrFail();
+
+        if ($user->completed_payments()->exists()) {
+            return;
+        }
 
         $user->payments()->create([
             'gateway_name' => Payment::GATEWAY_STRIPE,
