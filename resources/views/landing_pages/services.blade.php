@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="uk-width-auto">
                                     <a class="uk-button uk-button-primary uk-border-rounded"
-                                       href="{{ route('register') }}">Register</a>
+                                       href="{{ route('consultation') }}">Register</a>
                                 </div>
                             </div>
                         </div>

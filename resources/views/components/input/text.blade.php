@@ -9,7 +9,7 @@
             </a>
         @endisset
     @endisset
-    <input {{ $attributes->merge(['class' => 'form-control', 'type' => 'text']) }}
+    <input {{ $attributes->merge(['class' => 'form-control', 'type' => 'text']) }} name="{{ $name }}"
            id="{{ $id }}" placeholder="{{ $placeholder }}"
            value="{{ old($name, $value) }}">
     @if($name && $errors->has($name))<small class="text-danger">{{ $errors->first($name) }}</small>@endif

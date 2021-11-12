@@ -1,5 +1,7 @@
 <?php
 
+use App\Actions\SettingsManager;
+
 if (!function_exists('int_random')) {
     function int_random(int $length):int
     {
@@ -22,5 +24,22 @@ if (!function_exists('full_name_regex')) {
     function full_name_regex(): string
     {
         return "/^\w+\s\w++(\s\w+)?$/i";
+    }
+}
+
+if (!function_exists('settings')) {
+    /**
+     * @param null $key
+     * @return SettingsManager|mixed|null
+     */
+    function settings($key = null)
+    {
+        $manager = new SettingsManager();
+
+        if (!$key) {
+            return $manager;
+        }
+
+        return $manager->get($key);
     }
 }

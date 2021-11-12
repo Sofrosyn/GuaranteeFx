@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
-use App\Models\User;
+use App\Models\Registration;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\QueryException;
 use PowerComponents\LivewirePowerGrid\Column;
@@ -40,7 +40,7 @@ class UserTable extends PowerGridComponent
     */
     public function datasource(): ?Builder
     {
-        return User::query()->with('country');
+        return Registration::query()->with('country')->withExists('completed_payments');
     }
 
     /*
@@ -69,14 +69,14 @@ class UserTable extends PowerGridComponent
             ->addColumn('id')
             ->addColumn('full_name')
             ->addColumn('email')
-            ->addColumn('country', fn(User $user) => $user->country->name)
-            ->addColumn('is_admin_formatted', function (User $user) {
-                return $user->is_admin ? "Yes" : "No";
+            ->addColumn('country', fn(Registration $user) => $user->country->name)
+            ->addColumn('haas_payment', function (Registration $user) {
+                return ($user->completed_payments_exists ? "Yes" : "No");
             })
-            ->addColumn('created_at_formatted', function (User $user) {
+            ->addColumn('created_at_formatted', function (Registration $user) {
                 return $user->created_at->format('Y-m-d H:i');
             })
-            ->addColumn('updated_at_formatted', function (User $user) {
+            ->addColumn('updated_at_formatted', function (Registration $user) {
                 return $user->created_at->format('Y-m-d H:i');
             });
     }
@@ -102,7 +102,6 @@ class UserTable extends PowerGridComponent
                 ->field('full_name')
                 ->sortable()
                 ->searchable()
-                ->editOnClick()
                 ->makeInputText(),
 
             Column::add()
@@ -118,10 +117,8 @@ class UserTable extends PowerGridComponent
                 ->sortable('country_id'),
 
             Column::add()
-                ->title(__('ADMIN'))
-                ->field('is_admin_formatted')
-                ->makeBooleanFilter('is_admin')
-            // ->toggleable()
+                ->title(__('Made Payment'))
+                ->field('haas_payment')
             ,
 
             Column::add()

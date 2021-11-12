@@ -18,6 +18,7 @@
         "livewire/livewire": "^2.5",
         "mews/purifier": "^3.3",
         "power-components/livewire-powergrid": "^1.4",
+        "realrashid/sweet-alert": "^4.1",
         "spatie/laravel-medialibrary": "^7.0.0",
         "stripe/stripe-php": "^7.100"
     },

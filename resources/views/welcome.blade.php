@@ -277,7 +277,7 @@
                                             <i class="in-icon-wrap circle small red"></i>
                                         </div>
                                         <div>
-                                            <a href="{{ route('home') }}">
+                                            <a href="{{ route('pages.account_management') }}">
                                                 <h6 class="uk-margin-remove">Account Management</h6>
                                             </a>
                                         </div>

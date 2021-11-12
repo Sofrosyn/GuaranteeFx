@@ -44,9 +44,10 @@
                 </div>
                 <div class="uk-navbar-right">
                     <div class="uk-navbar-item uk-visible@m in-optional-nav">
-                        <a href="{{ route('register') }}" class="uk-button uk-button-primary uk-border-rounded "
-                           style="color: white;">Consultation</a>
-
+                        @if(settings('accept_registration'))
+                            <a href="{{ route('consultation') }}" class="uk-button uk-button-primary uk-border-rounded "
+                               style="color: white;">Consultation</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -127,9 +128,11 @@
         <!-- totop end -->
 </footer>
 <!-- Javascript -->
+@include('sweetalert::alert')
 <script src="{{ asset('landing/js/vendors/uikit.min.js') }}"></script>
 <script src="{{ asset('landing/js/vendors/blockit.min.js') }}"></script>
 <script src="{{ asset('landing/js/config-theme.js') }}"></script>
+@stack('js')
 </body>
 
 </html>

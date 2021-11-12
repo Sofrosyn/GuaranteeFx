@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Registration;
 use App\Models\Signal;
 use Egulias\EmailValidator\EmailValidator;
 use Egulias\EmailValidator\Validation\DNSCheckValidation;
@@ -33,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Relation::enforceMorphMap([
             'signal' => Signal::class,
+            'registrant' => Registration::class,
         ]);
 
         Schema::defaultStringLength(191);

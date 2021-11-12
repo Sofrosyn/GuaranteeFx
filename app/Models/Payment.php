@@ -26,4 +26,9 @@ class Payment extends Model
     protected $dates = [
         'paid_at',
     ];
+
+    public function user()
+    {
+        return $this->morphTo();
+    }
 }

@@ -19,6 +19,12 @@
             <span>Signals</span>
         </a>
     </li>
+    <li>
+        <a href="{{ route('admin.settings') }}" class="waves-effect">
+            <i class="fa fa-cog"></i>
+            <span>Settings</span>
+        </a>
+    </li>
 
     {{--<li>
         <a href="javascript: void(0);" class="has-arrow waves-effect">

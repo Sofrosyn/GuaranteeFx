@@ -58,6 +58,7 @@
 <script src="{{ asset('vendor/dashboard/libs/node-waves/waves.min.js') }}"></script>
 
 <script src="{{ asset('js/dashboard.js') }}"></script>
+@include('sweetalert::alert')
 @stack('js')
 
 </body>

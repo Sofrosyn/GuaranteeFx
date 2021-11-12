@@ -20,8 +20,6 @@ class HomeController
 
     public function streamSignalVideo(Signal $signal)
     {
-        abort_if(!auth()->user()->is_subscribed, 403);
-
         $video = $signal->getFirstMedia();
 
         return response()->file($video->getPath());

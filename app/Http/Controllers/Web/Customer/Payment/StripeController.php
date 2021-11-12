@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Web\Customer\Payment;
 
 use App\Actions\StripeManager;
+use App\Mail\Customer\SuccessfulPaymentMail;
 use App\Models\Payment;
-use App\Models\User;
+use App\Models\Registration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Stripe\Checkout\Session as StripeSession;
 
 class StripeController
@@ -17,21 +19,27 @@ class StripeController
         $this->stripeManager = $stripeManager;
     }
 
-    public function redirectTOCheckout()
+    public function redirectTOCheckout(Registration $registration)
     {
        $description =  config('app.name') . " Subscription";
-        $url = $this->stripeManager->createCheckout($description, auth()->user()->email, 2000);
+        $url = $this->stripeManager->createCheckout($description, $registration->email, 2000);
 
         return redirect()->away($url, 303);
     }
 
-    public function handleCallback(Request $request, $status)
+    public function handleCallback($status)
     {
-        $message  = $status = 'success' ?
-            "Payment has been received and is being processed. Please allow upto 5 minutes.":
-            "Payment was canceled";
+        if ($status === 'success') {
+            alert()
+                ->success(
+                    'Payment received',
+                    'Payment has been received and is being processed. Please check your email for further instructions.'
+                );
+        } else {
+            alert()->error('Payment failed', 'Payment was cancelled');
+        }
 
-        return redirect()->route('home')->with('info', $message);
+        return redirect()->route('welcome');
     }
 
     public function handleWebhook(Request $request)
@@ -65,8 +73,8 @@ class StripeController
     {
         $user_email = $session->customer_email;
 
-        /** @var User $user */
-        $user = User::query()->where('email', $user_email)->firstOrFail();
+        /** @var Registration $user */
+        $user = Registration::query()->where('email', $user_email)->firstOrFail();
 
         $user->payments()->create([
             'gateway_name' => Payment::GATEWAY_STRIPE,
@@ -76,5 +84,7 @@ class StripeController
             'amount_paid' => $session->amount_total,
             'currency' => $session->currency,
         ]);
+
+        Mail::send(new SuccessfulPaymentMail($user));
     }
 }

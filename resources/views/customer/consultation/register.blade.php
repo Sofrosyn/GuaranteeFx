@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('title', 'Login')
+@section('title', 'Register')
 
 @section('content')
     <div class="uk-width-expand@m uk-flex uk-flex-middle">
@@ -15,44 +15,50 @@
                     </a>
                     <!-- logo end -->
                     <p class="uk-text-lead uk-margin-top uk-margin-remove-bottom">
-                        Log into your account
+                        Submit your Details to get started
                     </p>
+                    {{--<p class="uk-text-small uk-margin-remove-top uk-margin-medium-bottom">
+                        Already have an account?
+                        <a href="{{ route('login') }}">
+                            Login here
+                        </a>
+                    </p>--}}
                     <!-- login form begin -->
-                    <form class="uk-grid uk-form" method="post">
+                    <form class="uk-grid uk-form" method="post" action="{{ route('consultation') }}">
                         @csrf
+                        @error('full_name')
+                        <p style="color: red;" class="uk-text-small uk-margin-remove uk-width-1-1">{{ $message }}</p>
+                        @enderror
                         @error('email')
                         <p style="color: red;" class="uk-text-small uk-margin-remove uk-width-1-1">{{ $message }}</p>
                         @enderror
-                        @error('password')
+                        @error('country_id')
                         <p style="color: red;" class="uk-text-small uk-margin-remove uk-width-1-1">{{ $message }}</p>
                         @enderror
                         <div class="uk-margin-small uk-width-1-1 uk-inline">
                             <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
+                            <input class="uk-input uk-border-rounded" id="full_name" value="{{ old('full_name') }}"
+                                   placeholder="FUll Name" name="full_name">
+                        </div>
+                        <div class="uk-margin-small uk-width-1-1 uk-inline">
+                            <span class="uk-form-icon uk-form-icon-flip fas fa-envelope fa-sm"></span>
                             <input class="uk-input uk-border-rounded" id="username" value="{{ old('email') }}"
                                    type="email" placeholder="Email" name="email">
                         </div>
                         <div class="uk-margin-small uk-width-1-1 uk-inline">
-                            <span class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"></span>
-                            <input class="uk-input uk-border-rounded" id="password" type="password"
-                                   placeholder="Password" name="password">
-                        </div>
-                        <div class="uk-margin-small uk-width-auto uk-text-small">
-                            <label>
-                                <input class="uk-checkbox uk-border-rounded" name="remember"
-                                       {{ old('remember') ? 'checked' : '' }}
-                                       type="checkbox">
-                                Remember me
-                            </label>
-                        </div>
-                        <div class="uk-margin-small uk-width-expand uk-text-small">
-                            <label class="uk-align-right">
-                                <a class="uk-link-reset" href="{{ route('password.request') }}">Forgot password?</a>
-                            </label>
+                            <span class="uk-form-icon uk-form-icon-flip fas fa-flag-checkered fa-sm"></span>
+                            <select class="uk-select" name="country_id">
+                                <option value="">Country</option>
+                                @foreach($countries as $country)
+                                    <option {{ $country->id == old('country_id') ? 'selected' : '' }}
+                                            value="{{ $country->id }}">{{ $country->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="uk-margin-small uk-width-1-1">
                             <button class="uk-button uk-width-1-1 uk-button-primary uk-border-rounded uk-float-left"
                                     type="submit" name="submit">
-                                Login
+                                Submit
                             </button>
                         </div>
                     </form>

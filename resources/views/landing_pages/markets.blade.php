@@ -117,22 +117,31 @@
                     <div class="uk-width-2-3@m">
                         <div class="uk-grid uk-grid-small" data-uk-grid>
                             <div class="uk-width-auto@m">
-                                <i class="fas fa-money-bill-wave fa-2x in-icon-wrap circle large primary-color uk-margin-right"></i>
+                                <i class="fas fa-video fa-2x in-icon-wrap circle large primary-color uk-margin-right"></i>
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Why Invest with GuarantyFX?</h3>
-                                <p>Forex managed accounts allow you to invest in Forex under the supervision of a
-                                    professional trader.
-                                    Because it moves so quickly and is more liquid than other markets, the Forex market
-                                    is the most active in the world. Because of this, transaction costs are cheaper, and
-                                    it is gaining popularity among investors.
+                                <h3>Free Signals</h3>
+                                <ul class="uk-list uk-list-striped" uk-lightbox>
+                                    @forelse($signals as $signal)
+                                     <li>
+                                         <a class="" href="{{ $signal->signed_video_url }}"
+                                            data-type="video" data-caption="{{ $signal->title }}">
+                                             {{ $signal->title }}
+                                         </a>
+                                     </li>
+                                    @empty
+                                        <li>No signals at the moment</li>
+                                    @endforelse
+                                </ul>
+                                <dl class="uk-description-list uk-description-list-divider" uk-lightbox>
 
-                                    With our company's Forex trading services, you have the finest, safest, and easiest
-                                    way to obtain profits into your account.
-                                    We'll take care of the trading from the start, in the most convenient way possible;
-                                    all you have to do now is keep an eye on your account balance.
-                                </p>
-
+                                    <div id="modal-media-video" class="uk-flex-top" uk-modal>
+                                        <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+                                            <button class="uk-modal-close-outside" type="button" uk-close></button>
+                                            <video src="" id="signal-video-element" controls playsinline uk-video></video>
+                                        </div>
+                                    </div>
+                                </dl>
                             </div>
                         </div>
                     </div>
@@ -152,7 +161,7 @@
                                 </div>
                                 <div class="uk-width-auto">
                                     <a class="uk-button uk-button-primary uk-border-rounded"
-                                       href="{{ route('register') }}">Register</a>
+                                       href="{{ route('consultation') }}">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -163,3 +172,15 @@
         <!-- section content end -->
     </main>
 @endsection
+
+@push('js')
+<script>
+    document.querySelectorAll('.signal-title').forEach(n => {
+        n.addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('signal-video-element').src = this.href;
+            UIkit.modal(document.getElementById('modal-media-video')).show();
+        })
+    })
+</script>
+@endpush
