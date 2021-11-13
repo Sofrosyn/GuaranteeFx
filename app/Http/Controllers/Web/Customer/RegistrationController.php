@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Web\Customer;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\ValidateConsultationRegistrationStatus;
-use App\Http\Requests\Customer\SubmitConsultationRequest;
+use App\Http\Requests\Customer\SubmitRegistrationRequest;
 use App\Mail\Customer\PostRegistrationMail;
 use App\Models\Country;
 use App\Models\Registration;
@@ -25,7 +25,7 @@ class RegistrationController extends Controller
         ]);
     }
 
-    public function submit(SubmitConsultationRequest $request)
+    public function submit(SubmitRegistrationRequest $request)
     {
         $data = $request->validated();
 
