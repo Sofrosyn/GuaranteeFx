@@ -11,7 +11,7 @@ use App\Models\Registration;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
-class ConsultationController extends Controller
+class RegistrationController extends Controller
 {
     public function __construct()
     {

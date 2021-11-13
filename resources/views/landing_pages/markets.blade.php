@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="uk-width-auto">
                                     <a class="uk-button uk-button-primary uk-border-rounded"
-                                       href="{{ route('consultation') }}">Register</a>
+                                       href="{{ route('registration') }}">Register</a>
                                 </div>
                             </div>
                         </div>

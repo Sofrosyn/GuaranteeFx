@@ -6,7 +6,7 @@ use App\Models\Country;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class SubmitConsultationRequest extends FormRequest
+class SubmitRegistrationRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -16,7 +16,7 @@ class SubmitConsultationRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email:dns'],
             'country_id' => ['required', Rule::exists(Country::class, 'id')],
             'full_name' => [
                 'required', 'min:2', 'max:100', 'first_and_last_name'

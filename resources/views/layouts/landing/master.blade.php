@@ -45,8 +45,8 @@
                 <div class="uk-navbar-right">
                     <div class="uk-navbar-item uk-visible@m in-optional-nav">
                         @if(settings('accept_registration'))
-                            <a href="{{ route('consultation') }}" class="uk-button uk-button-primary uk-border-rounded "
-                               style="color: white;">Consultation</a>
+                            <a href="{{ route('registration') }}" class="uk-button uk-button-primary uk-border-rounded "
+                               style="color: white;">Registration</a>
                         @endif
                     </div>
                 </div>

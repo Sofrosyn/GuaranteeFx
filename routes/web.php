@@ -41,9 +41,9 @@ Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
 
 Auth::routes(['verify' => true, 'register' => false]);
 
-Route::group(['prefix' => 'consultation',], function () {
-   Route::get('', [Customer\ConsultationController::class, 'showRegistrationForm'])->name('consultation');
-   Route::post('', [Customer\ConsultationController::class, 'submit']);
+Route::group(['prefix' => 'registration',], function () {
+   Route::get('', [Customer\RegistrationController::class, 'showRegistrationForm'])->name('registration');
+   Route::post('', [Customer\RegistrationController::class, 'submit']);
 });
 
 Route::get('make-payment/{registration}', [Customer\Payment\StripeController::class, 'redirectTOCheckout'])

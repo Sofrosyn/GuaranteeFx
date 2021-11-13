@@ -115,7 +115,7 @@
                                     <h3>Get up to 50% ROI per investment on all Assets &amp; forex trades</h3>
                                 </div>
                                 <div class="uk-width-auto">
-                                    <a class="uk-button uk-button-primary uk-border-rounded" href="{{ route('consultation') }}">Register</a>
+                                    <a class="uk-button uk-button-primary uk-border-rounded" href="{{ route('registration') }}">Register</a>
                                 </div>
                             </div>
                         </div>

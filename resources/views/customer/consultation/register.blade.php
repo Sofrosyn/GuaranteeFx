@@ -8,10 +8,10 @@
             <div class="uk-width-3-5@m">
                 <div class="in-padding-horizontal@s">
                     <!-- logo begin -->
-                    <a class="uk-logo" href="{{ route('welcome') }}">
+                    <a class="uk-display-block uk-margin-auto" style="max-width: 100px" href="{{ route('welcome') }}">
                         <img src="{{ asset('landing/img/in-lazy.gif') }}"
-                             data-src="{{ asset('landing/img/in-logo-2.svg') }}" alt="logo" width="160" height="34"
-                             data-uk-img>
+                             data-src="{{ asset('landing/img/logo.png') }}" alt="logo" width="160" height="34"
+                             data-uk-img class="uk-margin uk-display-inline-block">
                     </a>
                     <!-- logo end -->
                     <p class="uk-text-lead uk-margin-top uk-margin-remove-bottom">
@@ -24,7 +24,7 @@
                         </a>
                     </p>--}}
                     <!-- login form begin -->
-                    <form class="uk-grid uk-form" method="post" action="{{ route('consultation') }}">
+                    <form class="uk-grid uk-form" method="post" action="{{ route('registration') }}">
                         @csrf
                         @error('full_name')
                         <p style="color: red;" class="uk-text-small uk-margin-remove uk-width-1-1">{{ $message }}</p>
