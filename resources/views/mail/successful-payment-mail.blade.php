@@ -8,6 +8,6 @@ group. Use the button below to join
 Join Now
 @endcomponent
 
-Thanks,<br>
+Regards,<br>
 {{ config('app.name') }}
 @endcomponent

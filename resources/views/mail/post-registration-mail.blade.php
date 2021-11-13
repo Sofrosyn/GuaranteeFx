@@ -7,6 +7,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos hic molestia
 Make Payment
 @endcomponent
 
-Thanks,<br>
+Regards,<br>
 {{ config('app.name') }}
 @endcomponent
